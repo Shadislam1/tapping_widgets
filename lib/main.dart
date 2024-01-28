@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea( 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
 
             CircleAvatar(
@@ -45,64 +47,61 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(
+              height: 20.0,
+              width: 250,
+              child: Divider(
+              color: Colors.black87,
+              ),
+            ),
 
-            Container(
-              padding: EdgeInsets.all(10),
+            Card(
+              
               color: Colors.white,
               margin:EdgeInsets.symmetric(
                 vertical: 10.0,
               
               horizontal: 25.0,
               ) ,
-              child: Row(
-                children: <Widget> [
-                    Icon(
+              child: ListTile(
+                leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       '01738617295',
                       style: TextStyle(
                         color: Colors.teal[900],
                         fontFamily: 'Source Sans 3',
                         fontSize: 20.0,
                       ),
-                      )
-                ],
+                      ),
               ),
             ),
 
             
-            Container(
-              padding: EdgeInsets.all(10),
+            Card(
+              
               color: Colors.white,
               margin:EdgeInsets.symmetric(
                 vertical: 10.0,
               
               horizontal: 25.0,
               ) ,
-              child: Row(
-                children: <Widget> [
-                    Icon(
+              child: ListTile(
+                leading:  Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       'shadislam999@emil.com',
                       style: TextStyle(
                         color: Colors.teal[900],
                         fontFamily: 'Source Sans 3',
                         fontSize: 20.0,
                       ),
-                      )
-                ],
-              ),
+                      ) ,
+              )
             )
              
           ],
@@ -112,4 +111,7 @@ class MyApp extends StatelessWidget {
   );
   }
 }
+
+
+
 
